@@ -13,14 +13,14 @@ public class CombSort<T extends Comparable<T>> extends AbstractSorting<T> {
 		int gap = (int) (array.length/fator);
 		int i = leftIndex;
 		
-		while (gap >= 1) {
-			if ((gap + i) <= rightIndex) {
-				if (array[i].compareTo(array[gap]) > 0) {
-					Util.swap(array, i, gap);
-					i += 1;
-				}
-			}else {
+		while (gap > 1) {
+			if (array[i].compareTo(array[gap+i]) > 0) {
+				Util.swap(array, i, gap+i);
+			}
+			i += 1;
+			if ((gap + i) > rightIndex) {	
 				gap = (int) (gap/fator);
+				i = leftIndex;
 			}
 		}
 		
