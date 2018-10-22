@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-10-18T14:51:10.690-0300</date>
+  <logger>JOSE DAVI DE ARAUJO SOUZA</logger>
+  <level>FINE</level>
+  <message>File 117210696-JOSE DAVI DE ARAUJO SOUZA.zip was received. It was sent by JOSE DAVI DE ARAUJO SOUZA from IP 10.0.0.104</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-10-20T00:20:21.299-0300</date>
+  <logger>JOSE DAVI DE ARAUJO SOUZA</logger>
+  <level>FINE</level>
+  <message>File 117210696-JOSE DAVI DE ARAUJO SOUZA.zip was received. It was sent by JOSE DAVI DE ARAUJO SOUZA from IP 192.168.1.102</message>
+</record>
