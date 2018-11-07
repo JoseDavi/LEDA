@@ -133,6 +133,7 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 	public T extractRootElement() {
 		T saida = heap[0];
 		heap[0] = heap[index];
+		heap[index] = null;
 		index--;
 		heapify(0);
 
@@ -144,12 +145,23 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 		return heap[0];
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T[] heapsort(T[] array) {
-		//T[] novoHeap = new HeapImpl<>(comparator)
-		return null;
+		T[] saida = (T[]) new Comparable[array.length];
+		Comparator<T> comparator = (o1,o2) -> (o2.compareTo(o1));
+		HeapImpl<T> novoHeap = new HeapImpl<T>(comparator);
+		novoHeap.buildHeap(array);
+		
+		int i = 0;
+		while (i < array.length) {
+			saida[i] = novoHeap.extractRootElement();
+			i++;
+		}
+		
+		return saida;
 	}
-
+	
 	@Override
 	public int size() {
 		return index + 1;
