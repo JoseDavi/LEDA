@@ -73,6 +73,7 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 				resp.add(elem);
 			}
 		}
+		
 		return (T[]) resp.toArray(new Comparable[0]);
 	}
 

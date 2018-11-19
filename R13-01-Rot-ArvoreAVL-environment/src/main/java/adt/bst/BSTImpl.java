@@ -27,7 +27,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 		return height(root);
 	}
 
-	private int height(BSTNode<T> root) {
+	protected int height(BSTNode<T> root) {
 		if (root.isEmpty()) {
 			return -1;
 		} else {
@@ -52,20 +52,22 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	@Override
 	public void insert(T element) {
-		insert(element, root, new BSTNode<T>());
+		insert(element, root);
 	}
 
-	private void insert(T element, BSTNode<T> node, BSTNode<T> parent) {
+	protected BSTNode<T> insert(T element, BSTNode<T> node) {
 		if (node.isEmpty()) {
 			node.setData(element);
-			node.setLeft(new BSTNode<>());
-			node.setRight(new BSTNode<>());
-			node.setParent(parent);
-		} else if (element.compareTo(node.getData()) > 0) {
-			insert(element, (BSTNode<T>) node.getRight(), node);
+			node.setLeft(new BSTNode.Builder<T>().parent(node).build());
+			node.setRight(new BSTNode.Builder<T>().parent(node).build());
+
+			return node;
 		} else if (element.compareTo(node.getData()) < 0) {
-			insert(element, (BSTNode<T>) node.getLeft(), node);
+			node = this.insert(element, (BSTNode<T>) node.getLeft());
+		} else {
+			node = this.insert(element, (BSTNode<T>) node.getRight());
 		}
+		return node;
 	}
 
 	@Override
@@ -81,6 +83,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 		while (!maximo.getRight().isEmpty()) {
 			maximo = (BSTNode<T>) maximo.getRight();
 		}
+		
 		return maximo;
 	}
 
@@ -143,7 +146,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 		remove(node);
 	}
 
-	private void remove(BSTNode<T> node) {
+	protected void remove(BSTNode<T> node) {
 		if (node == null || node.isEmpty()) {
 			return;
 		}
