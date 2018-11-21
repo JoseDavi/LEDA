@@ -7,3 +7,23 @@
   <level>FINE</level>
   <message>File 117210696-JOSE DAVI DE ARAUJO SOUZA.zip was received. It was sent by JOSE DAVI DE ARAUJO SOUZA from IP 150.165.42.176</message>
 </record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-11-20T22:29:43.513-0300</date>
+  <logger>JOSE DAVI DE ARAUJO SOUZA</logger>
+  <level>FINE</level>
+  <message>File 117210696-JOSE DAVI DE ARAUJO SOUZA.zip was received. It was sent by JOSE DAVI DE ARAUJO SOUZA from IP 10.0.0.105</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-11-20T22:31:33.901-0300</date>
+  <logger>JOSE DAVI DE ARAUJO SOUZA</logger>
+  <level>FINE</level>
+  <message>File 117210696-JOSE DAVI DE ARAUJO SOUZA.zip was received. It was sent by JOSE DAVI DE ARAUJO SOUZA from IP 10.0.0.105</message>
+</record>
